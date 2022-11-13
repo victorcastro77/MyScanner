@@ -1,33 +1,28 @@
+import java.util.Scanner;
 
-/**
- * Write a description of class MyScanner here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class MyScanner
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class MyScanner
-     */
-    public MyScanner()
-    {
-        // initialise instance variables
-        x = 0;
+    public void run() {
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            if (scanner.hasNext()) {
+                String str = scanner.next();
+                System.out.println(str);
+            }
+        }
+    }
+    public void run1() {
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            if (scanner.hasNext()) {
+                int i = scanner.nextInt();
+                System.out.println(i*3);
+            }
+        }
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public static void main(String[] args) {
+        MyScanner myScanner = new MyScanner();
+        myScanner.run();
     }
 }
